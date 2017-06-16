@@ -1,0 +1,22 @@
+name: mapscii
+version: "1.0"
+summary: mapscii
+description: |
+  Browse a map via telnet
+grade: stable
+confinement: strict
+
+apps:
+  mapscii:
+    command: mapscii.sh 
+    plugs: [network, network-bind]
+parts:
+  mapscii:
+    source: https://github.com/MariusQuabeck/mapscii.git
+    source-branch: master
+    plugin: dump
+    stage-packages:
+      - telnet
+
+
+  
