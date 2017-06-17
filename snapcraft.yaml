@@ -18,6 +18,12 @@ parts:
     stage-packages:
       - telnet
       - telnetd
-
+helpers:
+        stage-packages:
+           - telnet
+        plugin: make
+        source: helpers
+        snap:
+           - bin/telnet
 
   
